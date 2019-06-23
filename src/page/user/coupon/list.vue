@@ -171,6 +171,7 @@ export default {
         onLoad() {
             this.page++;
             GetCoupon({page:this.page}).then(response=>{
+                // debugger
                 response.List.forEach(item => {
                     item.show=false;
                     this.list.push(item);

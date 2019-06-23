@@ -14,6 +14,7 @@ const servicef =function(parameter){
   if(dataSources=='local'){
     //定义回调函数和axios一致
     const promist = new Promise(function(resolve){
+      // debugger
         var data=datas[parameter.url];
         if(typeof data=='string'){
           data= JSON.parse(data);

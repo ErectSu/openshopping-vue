@@ -7,7 +7,7 @@
         </a>
       </div>
       <div class="user-profile-username">
-        <a href="/#/user/info">
+        <a href="/#/user/info/1">
           <span class="m-nick">{{data.UserName}}</span>
         </a>  
       </div>
