@@ -34,10 +34,10 @@ export default {
             this.$router.push('/user/address/edit')
         },
 
-        onEdit(item, index) {
+        onEdit(item) {
             this.$router.push('/user/address/edit?id='+item.id);
         },
-        onSelect(item,index){
+        onSelect(item){
             if(!this.isSelect){
                 return;
             }

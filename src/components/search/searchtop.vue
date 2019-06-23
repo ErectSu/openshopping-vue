@@ -34,7 +34,6 @@ export default {
     },
     methods:{
         onSearch() {
-            console.log(this.value);
         },
         onBack() {
             history.back();

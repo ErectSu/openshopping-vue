@@ -13,7 +13,7 @@ const service =axios.create({
 const servicef =function(parameter){
   if(dataSources=='local'){
     //定义回调函数和axios一致
-    const promist = new Promise(function(resolve,reject){
+    const promist = new Promise(function(resolve){
         var data=datas[parameter.url];
         if(typeof data=='string'){
           data= JSON.parse(data);
@@ -38,7 +38,6 @@ const servicef =function(parameter){
     },
     error => {
       // Do something with request error
-      console.log(error) // for debug
       Promise.reject(error)
     }
   )
@@ -74,7 +73,6 @@ service.interceptors.response.use(
         //     })
         //   })
         // }
-        console.log(1);
         return Promise.reject('error')
       } else {
         if(typeof response.data.Tag=='string'){

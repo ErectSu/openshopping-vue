@@ -98,12 +98,11 @@ export default {
         onCancel() {
             this.showPicker=false;
         },
-        onConfirm(value, index) {
+        onConfirm(value) {
             this.remark=value;
             this.showPicker=false;
         },
         onRead(file) {
-            console.log(file.length);
             if(file.length==undefined){
                 this.images.push(file.content);
             }else{
@@ -111,9 +110,8 @@ export default {
                     this.images.push(item.content);
                 });
             }
-            console.log(file)
         },
-        removeImage(index,image){
+        removeImage(index){
             this.images.splice(index,1);
         }
     }

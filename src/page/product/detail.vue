@@ -195,22 +195,22 @@ export default {
         s1: '30349',
         s2: '1193'
       },
-      customSkuValidator: (component) => {
+      customSkuValidator: () => {
         return '请选择xxx';
       },
       customStepperConfig: {
         quotaText: '单次限购100件',
         stockFormatter: (stock) => `剩余${stock}间`,
         handleOverLimit: (data) => {
-          const { action, limitType, quota } = data;
+          const { action } = data;
           if (action === 'minus') {
             this.$toast('至少选择一件商品');
           } else if (action === 'plus') {
-            if (limitType === LIMIT_TYPE.QUOTA_LIMIT) {
-              this.$toast(`限购${quota}件`);
-            } else {
-              this.$toast('库存不够了~~');
-            }
+            // if (limitType === LIMIT_TYPE.QUOTA_LIMIT) {
+            //   this.$toast(`限购${quota}件`);
+            // } else {
+            //   this.$toast('库存不够了~~');
+            // }
           }
         }
       },
@@ -232,7 +232,8 @@ export default {
       this.$router.push('/cart');
     },
     sorry() {
-      Toast('暂无后续逻辑~');
+      // Toast('暂无后续逻辑~');
+      this.$toast('暂无后续逻辑~');
     },
     showPromotion() {
         this.show=true;

@@ -41,7 +41,7 @@ export default {
                         this.$dialog.confirm({
                             message: '确定删除吗？'
                         }).then(() => {
-                            DelFavorite(item.id).then(response=>{
+                            DelFavorite(item.id).then(()=>{
                                 this.$toast('删除成功');
                                 this.$router.go(0);  
                             })

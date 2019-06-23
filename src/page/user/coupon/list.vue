@@ -221,7 +221,7 @@ export default {
                 return;
             }
             this.exchangeLoading=true;
-            ExchangeCoupon(this.couponCode).then(response=>{
+            ExchangeCoupon(this.couponCode).then(()=>{
                 this.$toast('兑换成功'); 
                 this.exchangeLoading=false;
                 this.$router.go(0); 

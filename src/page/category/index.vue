@@ -90,7 +90,6 @@ export default {
   },
   methods: {
     onSearch() {
-      console.log(this.value);
     },
     onClick(key) {
       this.activeKey = key;
@@ -146,7 +145,7 @@ export default {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: box;
+    display: flex;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-box;

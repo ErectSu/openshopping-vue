@@ -31,13 +31,13 @@ export default {
 
   methods: {
     onSave(data) {
-      SaveAddress(data).then(response=>{
+      SaveAddress(data).then(()=>{
         this.$toast('保存成功');
         this.$router.go(-1);
       })
     },
     onDelete(data) {
-      DelAddress(data).then(response=>{
+      DelAddress(data).then(()=>{
         this.$toast('删除成功');
         this.$router.go(-1);
       })
@@ -48,7 +48,6 @@ export default {
     if(id>0){
       this.showDelete=true;
       GetAddressById(id).then(response=>{
-        console.log(response);
         this.info=response;
       })
     }

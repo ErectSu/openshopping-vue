@@ -40,7 +40,7 @@ npm install -g @vue/cli
 
 npm install
 
-npm run dev
+npm run serve
 
 npm run build
 ```
